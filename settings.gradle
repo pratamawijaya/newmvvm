@@ -1,2 +1,4 @@
 include ':app'
+include ':common-android:navigation'
+
 rootProject.name='android-news-mvvm'
