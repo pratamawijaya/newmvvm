@@ -1,16 +1,16 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    compileSdkVersion Config.targetSdk
+    buildToolsVersion Config.buildTools
+
     defaultConfig {
         applicationId "com.pratamawijaya.newsapi"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -25,11 +25,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation Deps.tools_kotlin_stdlib
+    implementation Deps.lib_appcompat
+    implementation Deps.lib_core_ktx
+    implementation Deps.lib_constraint_layout
+
+    testImplementation Deps.lib_junit
+
+    androidTestImplementation Deps.lib_test_runner
+    androidTestImplementation Deps.lib_espresso_core
 }

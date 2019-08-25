@@ -1,0 +1,1 @@
+D:\Workspaces\android\Project\androidnewsmvvm\buildSrc\build\classes\kotlin\main\Config.class;D:\Workspaces\android\Project\androidnewsmvvm\buildSrc\build\classes\kotlin\main\Deps.class;D:\Workspaces\android\Project\androidnewsmvvm\buildSrc\build\classes\kotlin\main\Versions.class
