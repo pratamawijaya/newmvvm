@@ -13,6 +13,7 @@ object Versions {
     val junit = "4.12"
     val test_runner = "1.1.1"
     val espresso_core = "3.2.0"
+    val koin = "2.0.1"
 }
 
 object Deps {
@@ -26,4 +27,8 @@ object Deps {
     val lib_junit = "junit:junit:${Versions.junit}"
     val lib_test_runner = "androidx.test:runner:${Versions.test_runner}"
     val lib_espresso_core = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
+    val lib_koin_core = "org.koin:koin-core:${Versions.koin}"
+    val lib_koin_test = "org.koin:koin-test:${Versions.koin}"
+    val lib_koin_scope = "org.koin:koin-androidx-scope:${Versions.koin}"
+    val lib_koin_viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
 }

@@ -31,6 +31,10 @@ dependencies {
     implementation Deps.lib_core_ktx
     implementation Deps.lib_constraint_layout
 
+    implementation Deps.lib_koin_core
+    implementation Deps.lib_koin_scope
+    implementation Deps.lib_koin_viewmodel
+
     testImplementation Deps.lib_junit
 
     androidTestImplementation Deps.lib_test_runner
