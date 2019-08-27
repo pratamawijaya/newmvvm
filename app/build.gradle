@@ -27,10 +27,10 @@ android {
 dependencies {
     implementation project(Modules.features_onboarding)
     implementation project(Modules.features_homepage)
+    implementation project(Modules.features_hackernews_list)
 
     implementation project(Modules.common_android_navigation)
     implementation project(Modules.common_android_uicomponents)
-    implementation project(Modules.common_android_network)
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
@@ -41,5 +41,4 @@ dependencies {
     implementation Deps.lib_koin_scope
     implementation Deps.lib_koin_viewmodel
     implementation Deps.lib_timberkt
-
 }

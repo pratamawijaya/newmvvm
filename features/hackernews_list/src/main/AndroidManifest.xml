@@ -1,2 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pratamawijaya.hackernewslist" />
+    package="com.pratamawijaya.hackernewslist">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".presentation.HackernewsListActivity">
+            <intent-filter>
+                <action android:name="com.pratamawijaya.hackernewslist.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

@@ -16,5 +16,9 @@ object Navigations {
         return internalIntent(context, "com.pratamawijaya.homepage.open")
     }
 
+    fun openHackerNewsList(context: Context): Intent {
+        return internalIntent(context, "com.pratamawijaya.hackernewslist.open")
+    }
+
     private fun internalIntent(context: Context, action: String) = Intent(action).setPackage(context.packageName)
 }

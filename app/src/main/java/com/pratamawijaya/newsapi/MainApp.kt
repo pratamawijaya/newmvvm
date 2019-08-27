@@ -1,7 +1,6 @@
 package com.pratamawijaya.newsapi
 
 import android.app.Application
-import com.pratamawijaya.newsapi.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -18,7 +17,6 @@ class MainApp : Application() {
         startKoin {
             androidLogger(level = Level.DEBUG)
             androidContext(this@MainApp)
-            modules(listOf(appModule))
         }
 
     }

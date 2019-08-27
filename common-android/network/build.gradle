@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 dependencies {
 
-    implementation Deps.lib_retrofit
+    api Deps.lib_retrofit
     implementation Deps.lib_retrofit_gson
     implementation Deps.lib_okhttp_interceptor
     implementation Deps.lib_retrofit_coroutine_adapter
