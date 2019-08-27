@@ -1,4 +1,4 @@
-buildscript { 
+buildscript {
     ext.kotlin_version = '1.3.41'
 
     repositories {
@@ -8,7 +8,8 @@ buildscript {
     dependencies {
         classpath Deps.tools_gradle
         classpath Deps.tools_kotlin
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" }
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
 }
 
 allprojects {
@@ -20,7 +21,7 @@ allprojects {
 
 subprojects {
     afterEvaluate { project ->
-        if(project.hasProperty('android')) {
+        if (project.hasProperty('android')) {
             //apply plugin: "com"
 
             android {

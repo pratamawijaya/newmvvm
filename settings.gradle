@@ -1,4 +1,7 @@
 include ':app'
 include ':common-android:navigation'
+include ':features:hackernews_list'
+include ':features:onboarding'
+include ':features:homepage'
 
-rootProject.name='android-news-mvvm'
+rootProject.name = 'android-news-mvvm'

@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation Deps.tools_kotlin_stdlib
+    implementation Deps.lib_appcompat
+    implementation Deps.lib_core_ktx
+
+    testImplementation Deps.lib_junit
+    androidTestImplementation Deps.lib_test_runner
+    androidTestImplementation Deps.lib_espresso_core
+}
