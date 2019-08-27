@@ -1,9 +1,9 @@
-include ':app'
-include ':common-android:navigation'
-include ':common-android:uicomponents'
-include ':common-android:network'
-include ':features:hackernews_list'
-include ':features:onboarding'
-include ':features:homepage'
+include Modules.app
+include Modules.common_android_navigation
+include Modules.common_android_uicomponents
+include Modules.common_android_network
+include Modules.features_homepage
+include Modules.features_onboarding
+include Modules.features_hackernews_list
 
 rootProject.name = 'android-news-mvvm'

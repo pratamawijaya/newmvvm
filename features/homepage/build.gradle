@@ -4,8 +4,8 @@ apply plugin: 'kotlin-android-extensions'
 
 dependencies {
 
-    implementation project(':common-android:uicomponents')
-    implementation project(':common-android:navigation')
+    implementation project(Modules.common_android_uicomponents)
+    implementation project(Modules.common_android_navigation)
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
