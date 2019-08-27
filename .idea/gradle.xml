@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/hackernews_list" />
             <option value="$PROJECT_DIR$/features/homepage" />
+            <option value="$PROJECT_DIR$/features/newsapi_list" />
             <option value="$PROJECT_DIR$/features/onboarding" />
           </set>
         </option>

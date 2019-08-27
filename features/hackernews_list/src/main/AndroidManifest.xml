@@ -4,7 +4,7 @@
     <application android:theme="@style/AppTheme">
         <activity android:name=".presentation.HackernewsListActivity">
             <intent-filter>
-                <action android:name="com.pratamawijaya.hackernewslist.open" />
+                <action android:name="navigations.hackernewslist.open" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 

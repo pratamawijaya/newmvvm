@@ -13,6 +13,7 @@ object Modules {
     val features_onboarding = ":features:onboarding"
     val features_homepage = ":features:homepage"
     val features_hackernews_list = ":features:hackernews_list"
+    val features_newsapi_list = ":features:newsapi_list"
 }
 
 
