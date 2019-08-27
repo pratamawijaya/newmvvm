@@ -4,9 +4,15 @@ apply plugin: 'kotlin-android-extensions'
 
 dependencies {
 
+    implementation project(':common-android:network')
+
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
+
+    implementation Deps.lib_koin_core
+    implementation Deps.lib_koin_scope
+    implementation Deps.lib_koin_viewmodel
 
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner

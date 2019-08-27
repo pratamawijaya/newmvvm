@@ -4,6 +4,18 @@ object Config {
     val buildTools = "29.0.1"
 }
 
+object Modules {
+    val app = ":app"
+    val common_android_navigation = ":common-android:navigation"
+    val common_android_network = ":common-android:network"
+    val common_android_uicomponents = ":common-android:uicomponents"
+
+    val features_onboarding = ":features:onboarding"
+    val features_homepage = ":features:homepage"
+    val features_hackernews_list = ":features:hackernews_list"
+}
+
+
 object Versions {
     val kotlin = "1.3.41"
     val gradle = "3.5.0"
@@ -17,6 +29,9 @@ object Versions {
     val androidx_navigation = "2.1.0-rc01"
     val android_material = "1.1.0-alpha09"
     val timberkt = "1.5.1"
+    val retrofit = "2.4.0"
+    val logging_interceptor = "3.10.0"
+    val retrofit_coroutine_adapter = "0.9.2"
 }
 
 object Deps {
@@ -38,4 +53,8 @@ object Deps {
     val lib_koin_viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
     val lib_navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
     val lib_navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
+    val lib_retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    val lib_retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    val lib_okhttp_interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logging_interceptor}"
+    val lib_retrofit_coroutine_adapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit_coroutine_adapter}"
 }

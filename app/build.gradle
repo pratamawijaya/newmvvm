@@ -25,10 +25,12 @@ android {
 }
 
 dependencies {
-    implementation project(':features:onboarding')
-    implementation project(':features:homepage')
-    implementation project(':common-android:uicomponents')
-    implementation project(':common-android:navigation')
+    implementation project(Modules.features_onboarding)
+    implementation project(Modules.features_homepage)
+
+    implementation project(Modules.common_android_navigation)
+    implementation project(Modules.common_android_uicomponents)
+    implementation project(Modules.common_android_network)
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat

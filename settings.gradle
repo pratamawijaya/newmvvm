@@ -1,6 +1,7 @@
 include ':app'
 include ':common-android:navigation'
 include ':common-android:uicomponents'
+include ':common-android:network'
 include ':features:hackernews_list'
 include ':features:onboarding'
 include ':features:homepage'
