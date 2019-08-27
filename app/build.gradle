@@ -26,6 +26,7 @@ android {
 
 dependencies {
     implementation project(':features:onboarding')
+    implementation project(':features:homepage')
     implementation project(':common-android:uicomponents')
     implementation project(':common-android:navigation')
 
@@ -37,5 +38,6 @@ dependencies {
     implementation Deps.lib_koin_core
     implementation Deps.lib_koin_scope
     implementation Deps.lib_koin_viewmodel
+    implementation Deps.lib_timberkt
 
 }

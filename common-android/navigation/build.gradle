@@ -5,6 +5,8 @@ apply plugin: 'kotlin-android-extensions'
 dependencies {
     testImplementation Deps.lib_junit
 
+    implementation Deps.lib_timberkt
+
     androidTestImplementation Deps.lib_test_runner
     androidTestImplementation Deps.lib_espresso_core
 }

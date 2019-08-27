@@ -5,11 +5,16 @@ apply plugin: 'kotlin-android-extensions'
 dependencies {
 
     implementation project(':common-android:uicomponents')
+    implementation project(':common-android:navigation')
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
+    implementation Deps.lib_navigation_ui
+    implementation Deps.lib_navigation_fragment
+    implementation Deps.lib_timberkt
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner
     androidTestImplementation Deps.lib_espresso_core

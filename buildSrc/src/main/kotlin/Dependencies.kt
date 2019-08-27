@@ -14,6 +14,9 @@ object Versions {
     val test_runner = "1.1.1"
     val espresso_core = "3.2.0"
     val koin = "2.0.1"
+    val androidx_navigation = "2.1.0-rc01"
+    val android_material = "1.1.0-alpha09"
+    val timberkt = "1.5.1"
 }
 
 object Deps {
@@ -21,7 +24,8 @@ object Deps {
     val tools_kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val tools_gradle = "com.android.tools.build:gradle:${Versions.gradle}"
 
-    val lib_material = "com.google.android.material:material:1.1.0-alpha04"
+    val lib_timberkt = "com.github.ajalt:timberkt:${Versions.timberkt}"
+    val lib_material = "com.google.android.material:material:${Versions.android_material}"
     val lib_appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     val lib_core_ktx = "androidx.core:core-ktx:${Versions.core_ktx}"
     val lib_constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
@@ -32,4 +36,6 @@ object Deps {
     val lib_koin_test = "org.koin:koin-test:${Versions.koin}"
     val lib_koin_scope = "org.koin:koin-androidx-scope:${Versions.koin}"
     val lib_koin_viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    val lib_navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
+    val lib_navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
 }

@@ -3,9 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
+
+    implementation project(':common-android:uicomponents')
+    implementation project(':common-android:navigation')
+
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
+    implementation Deps.lib_timberkt
 
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_graph"
+    app:startDestination="@id/fragment_start">
+
+    <fragment
+        android:id="@+id/fragment_start"
+        android:name="com.pratamawijaya.onboarding.start_one.StartFragment"
+        android:label="fragment start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_fragment_start_to_fragment_second"
+            app:destination="@id/fragment_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_second"
+        android:name="com.pratamawijaya.onboarding.second.SecondFragment"
+        android:label="fragment second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_fragment_second_to_fragment_third"
+            app:destination="@id/fragment_third" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_third"
+        android:name="com.pratamawijaya.onboarding.third.ThirdFragment"
+        android:label="fragment third"
+        tools:layout="@layout/fragment_third" />
+
+</navigation>
