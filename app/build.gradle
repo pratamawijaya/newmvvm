@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply from: 'https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle'
 
 android {
     compileSdkVersion Config.targetSdk
@@ -24,7 +25,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':features:onboarding')
+    implementation project(':common-android:uicomponents')
+    implementation project(':common-android:navigation')
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
@@ -35,8 +38,4 @@ dependencies {
     implementation Deps.lib_koin_scope
     implementation Deps.lib_koin_viewmodel
 
-    testImplementation Deps.lib_junit
-
-    androidTestImplementation Deps.lib_test_runner
-    androidTestImplementation Deps.lib_espresso_core
 }

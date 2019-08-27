@@ -3,12 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
-
-    implementation project(':common-android:uicomponents')
-
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
+    implementation Deps.lib_material
 
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner

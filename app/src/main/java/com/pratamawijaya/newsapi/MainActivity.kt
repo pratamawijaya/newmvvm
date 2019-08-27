@@ -2,11 +2,13 @@ package com.pratamawijaya.newsapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.pratamawijaya.navigation.Navigations
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        Navigations.openOnboarding(this)
     }
 }

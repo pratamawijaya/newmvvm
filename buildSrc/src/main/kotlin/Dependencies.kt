@@ -21,6 +21,7 @@ object Deps {
     val tools_kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val tools_gradle = "com.android.tools.build:gradle:${Versions.gradle}"
 
+    val lib_material = "com.google.android.material:material:1.1.0-alpha04"
     val lib_appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     val lib_core_ktx = "androidx.core:core-ktx:${Versions.core_ktx}"
     val lib_constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
