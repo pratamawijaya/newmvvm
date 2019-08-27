@@ -12,7 +12,14 @@ buildscript {
     }
 }
 
+plugins {
+    id "io.gitlab.arturbosch.detekt" version "1.0.1"
+}
+
 allprojects {
+    apply from: "$rootDir/config/ktlint.gradle"
+    apply from: "$rootDir/config/detekt.gradle"
+
     repositories {
         google()
         jcenter()
@@ -22,8 +29,6 @@ allprojects {
 subprojects {
     afterEvaluate { project ->
         if (project.hasProperty('android')) {
-            //apply plugin: "com"
-
             android {
                 buildToolsVersion Config.buildTools
                 compileSdkVersion Config.targetSdk

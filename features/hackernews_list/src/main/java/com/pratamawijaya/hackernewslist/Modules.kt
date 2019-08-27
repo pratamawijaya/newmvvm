@@ -19,7 +19,6 @@ private val loadFeature by lazy {
 }
 
 val repositoryModule: Module = module {
-
 }
 
 val networkModule: Module = module {

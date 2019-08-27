@@ -18,6 +18,5 @@ class MainApp : Application() {
             androidLogger(level = Level.DEBUG)
             androidContext(this@MainApp)
         }
-
     }
 }
