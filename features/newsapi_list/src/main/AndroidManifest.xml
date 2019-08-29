@@ -1,2 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="newsapi.feature.newsapilist" />
+    package="newsapi.feature.newsapilist">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name="newmvvm.feature.newsapi.NewsApiListActivity">
+            <intent-filter>
+                <action android:name="navigations.newsapi.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

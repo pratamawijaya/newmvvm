@@ -9,7 +9,6 @@ dependencies {
     implementation Deps.lib_okhttp_interceptor
     implementation Deps.lib_retrofit_coroutine_adapter
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     testImplementation 'junit:junit:4.12'

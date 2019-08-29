@@ -11,6 +11,7 @@ dependencies {
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
     implementation Deps.lib_timberkt
+    implementation Deps.lib_material
 
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner

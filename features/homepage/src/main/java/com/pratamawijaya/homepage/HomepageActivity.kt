@@ -12,9 +12,11 @@ class HomepageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
         d { "homepage" }
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Dashboard"
 
         btnOpenHackerNews.setOnClickListener {
-            startActivity(Navigations.openHackerNewsList(this))
+            startActivity(Navigations.openNewsApiList(this))
         }
     }
 }

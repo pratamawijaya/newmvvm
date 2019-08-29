@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/colorPrimary" />
@@ -14,11 +15,11 @@
         android:layout_height="match_parent">
 
         <Button
+            android:id="@+id/btnOpenHackerNews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnOpenHackerNews"
             android:layout_centerInParent="true"
-            android:text="Open Hackernews" />
+            android:text="Open News Api" />
 
     </RelativeLayout>
 

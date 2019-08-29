@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-
 dependencies {
 
     implementation project(Modules.common_android_network)
@@ -12,6 +11,8 @@ dependencies {
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
     implementation Deps.lib_constraint_layout
+    implementation Deps.lib_navigation_fragment
+    implementation Deps.lib_navigation_ui
 
     implementation Deps.lib_koin_core
     implementation Deps.lib_koin_scope
@@ -20,5 +21,4 @@ dependencies {
     testImplementation Deps.lib_junit
     androidTestImplementation Deps.lib_test_runner
     androidTestImplementation Deps.lib_espresso_core
-
 }
