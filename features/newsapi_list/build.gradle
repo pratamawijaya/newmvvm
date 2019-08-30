@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
 
@@ -13,6 +14,7 @@ dependencies {
     implementation Deps.lib_constraint_layout
     implementation Deps.lib_navigation_fragment
     implementation Deps.lib_navigation_ui
+    implementation Deps.lib_viewmodel_ktx
 
     implementation Deps.lib_koin_core
     implementation Deps.lib_koin_scope

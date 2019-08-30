@@ -1,4 +1,4 @@
-package newmvvm.feature.newsapi.presentation
+package newmvvm.feature.newsapi.presentation.detail
 
 
 import android.os.Bundle

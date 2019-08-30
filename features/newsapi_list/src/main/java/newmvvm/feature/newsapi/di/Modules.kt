@@ -2,8 +2,9 @@ package newmvvm.feature.newsapi.di
 
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
 import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
-import newmvvm.feature.newsapi.services.NewsApiInterceptor
-import newmvvm.feature.newsapi.services.NewsApiServices
+import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
+import newmvvm.feature.newsapi.data.services.NewsApiServices
+import newmvvm.feature.newsapi.domain.usecase.GetNewsListUseCase
 import newsapi.common.network.createOkHttpClient
 import newsapi.common.network.createWebService
 import newsapi.feature.newsapilist.BuildConfig
@@ -16,7 +17,8 @@ private val loadFeature by lazy {
     loadKoinModules(
             listOf(featureModule,
                     repositoryModule,
-                    networkModule)
+                    networkModule,
+                    useCaseModule)
     )
 }
 
@@ -32,4 +34,8 @@ val networkModule = module {
     single { NewsApiInterceptor() }
     single { createOkHttpClient(get(), BuildConfig.DEBUG) }
     single { createWebService<NewsApiServices>(okHttpClient = get(), url = "https://newsapi.org/v2/") }
+}
+
+val useCaseModule = module {
+    factory { GetNewsListUseCase(newsApiRepository = get()) }
 }

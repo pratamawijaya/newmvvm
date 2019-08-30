@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="newmvvm.feature.newsapi.presentation.NewsDetailFragment">
+    tools:context="newmvvm.feature.newsapi.presentation.detail.NewsDetailFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

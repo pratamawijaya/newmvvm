@@ -1,4 +1,4 @@
-package newmvvm.feature.newsapi.services
+package newmvvm.feature.newsapi.data.services
 
 import okhttp3.Interceptor
 import okhttp3.Response

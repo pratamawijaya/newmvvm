@@ -36,6 +36,8 @@ object Versions {
     val coroutines = "1.1.1"
     val truth = "0.42"
     val gradle_version_plugin = "0.23.0"
+    val viewmodel_ktx = "2.2.0-alpha01"
+    val livedata = "2.2.0-alpha01"
 }
 
 object Deps {
@@ -46,16 +48,24 @@ object Deps {
 
     val lib_coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     val lib_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+
+    val lib_livedata_extension = "androidx.lifecycle:lifecycle-extensions:${Versions.livedata}"
+    val lib_livedata = "androidx.lifecycle:lifecycle-livedata:${Versions.livedata}"
+    val lib_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodel_ktx}"
+
     val lib_timberkt = "com.github.ajalt:timberkt:${Versions.timberkt}"
     val lib_material = "com.google.android.material:material:${Versions.android_material}"
     val lib_appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     val lib_core_ktx = "androidx.core:core-ktx:${Versions.core_ktx}"
     val lib_constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout}"
+
     val lib_koin_core = "org.koin:koin-core:${Versions.koin}"
     val lib_koin_scope = "org.koin:koin-androidx-scope:${Versions.koin}"
     val lib_koin_viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+
     val lib_navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
     val lib_navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
+
     val lib_retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val lib_retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     val lib_okhttp_interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logging_interceptor}"
