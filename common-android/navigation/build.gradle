@@ -3,10 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
-    testImplementation Deps.lib_junit
+    testImplementation Deps.lib_test_junit
 
     implementation Deps.lib_timberkt
 
     androidTestImplementation Deps.lib_test_runner
-    androidTestImplementation Deps.lib_espresso_core
+    androidTestImplementation Deps.lib_test_espresso_core
 }

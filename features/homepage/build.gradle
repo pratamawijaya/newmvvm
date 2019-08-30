@@ -13,7 +13,7 @@ dependencies {
     implementation Deps.lib_timberkt
     implementation Deps.lib_material
 
-    testImplementation Deps.lib_junit
+    testImplementation Deps.lib_test_junit
     androidTestImplementation Deps.lib_test_runner
-    androidTestImplementation Deps.lib_espresso_core
+    androidTestImplementation Deps.lib_test_espresso_core
 }
