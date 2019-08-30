@@ -35,12 +35,14 @@ object Versions {
     val retrofit_coroutine_adapter = "0.9.2"
     val coroutines = "1.1.1"
     val truth = "0.42"
+    val gradle_version_plugin = "0.23.0"
 }
 
 object Deps {
     val tools_kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val tools_kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val tools_gradle = "com.android.tools.build:gradle:${Versions.gradle}"
+    val tools_gradle_lib_version = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradle_version_plugin}"
 
     val lib_coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     val lib_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"

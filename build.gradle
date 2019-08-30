@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath Deps.tools_gradle
         classpath Deps.tools_kotlin
+        classpath Deps.tools_gradle_lib_version
     }
 }
 
@@ -26,6 +27,8 @@ allprojects {
 subprojects {
     afterEvaluate { project ->
         if (project.hasProperty('android')) {
+            apply plugin: "com.github.ben-manes.versions"
+
             android {
                 buildToolsVersion Config.buildTools
                 compileSdkVersion Config.targetSdk
