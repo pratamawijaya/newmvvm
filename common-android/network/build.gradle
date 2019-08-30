@@ -3,15 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
-
     api Deps.lib_retrofit
-    implementation Deps.lib_retrofit_gson
-    implementation Deps.lib_okhttp_interceptor
+    api Deps.lib_retrofit_gson
+    api Deps.lib_okhttp_interceptor
     implementation Deps.lib_retrofit_coroutine_adapter
-
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }

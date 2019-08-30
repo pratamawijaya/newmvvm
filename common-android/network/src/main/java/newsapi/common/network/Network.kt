@@ -11,9 +11,7 @@ import java.util.concurrent.TimeUnit
 
 
 fun createOkHttpClient(interceptor: Interceptor?, debug: Boolean = false): OkHttpClient {
-
     val timeout = 60L
-
     val httpLoggingInterceptor = HttpLoggingInterceptor()
     val clientBuilder = OkHttpClient.Builder()
 
