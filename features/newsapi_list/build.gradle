@@ -16,6 +16,9 @@ dependencies {
     implementation Deps.lib_navigation_ui
     implementation Deps.lib_viewmodel_ktx
 
+    implementation Deps.lib_coroutines_core
+    implementation Deps.lib_coroutines_android
+
     implementation Deps.lib_koin_core
     implementation Deps.lib_koin_scope
     implementation Deps.lib_koin_viewmodel
