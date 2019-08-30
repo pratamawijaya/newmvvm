@@ -6,6 +6,7 @@ object Config {
 
 object Modules {
     val app = ":app"
+    val common_core = ":common-android:core"
     val common_android_navigation = ":common-android:navigation"
     val common_android_network = ":common-android:network"
     val common_android_uicomponents = ":common-android:uicomponents"
@@ -51,7 +52,12 @@ object Deps {
 
     val lib_livedata_extension = "androidx.lifecycle:lifecycle-extensions:${Versions.livedata}"
     val lib_livedata = "androidx.lifecycle:lifecycle-livedata:${Versions.livedata}"
+    // viewmodelscope
     val lib_viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodel_ktx}"
+    // lifecycleruntime
+    val lib_viewmodel_lifecycleruntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.viewmodel_ktx}"
+    // livedata
+    val lib_viewmodel_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.viewmodel_ktx}"
 
     val lib_timberkt = "com.github.ajalt:timberkt:${Versions.timberkt}"
     val lib_material = "com.google.android.material:material:${Versions.android_material}"

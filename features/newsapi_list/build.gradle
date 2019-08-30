@@ -7,6 +7,7 @@ dependencies {
 
     implementation project(Modules.common_android_network)
     implementation project(Modules.common_android_uicomponents)
+    implementation project(Modules.common_core)
 
     implementation Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
@@ -14,7 +15,13 @@ dependencies {
     implementation Deps.lib_constraint_layout
     implementation Deps.lib_navigation_fragment
     implementation Deps.lib_navigation_ui
+
     implementation Deps.lib_viewmodel_ktx
+    implementation Deps.lib_viewmodel_lifecycleruntime
+    implementation Deps.lib_viewmodel_livedata
+
+    implementation Deps.lib_livedata
+    implementation Deps.lib_livedata_extension
 
     implementation Deps.lib_coroutines_core
     implementation Deps.lib_coroutines_android

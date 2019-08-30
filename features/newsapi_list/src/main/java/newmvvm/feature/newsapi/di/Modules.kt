@@ -1,5 +1,6 @@
 package newmvvm.feature.newsapi.di
 
+import newmvvm.feature.newsapi.data.model.mapper.ArticleMapper
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
 import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
 import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
@@ -26,8 +27,12 @@ val featureModule = module {
 
 }
 
+val mapperModule = module {
+    single { ArticleMapper() }
+}
+
 val repositoryModule = module {
-    single { NewsApiRepositoryImpl(newsApi = get()) as NewsApiRepository }
+    single { NewsApiRepositoryImpl(newsApi = get(), articleMapper = get()) as NewsApiRepository }
 }
 
 val networkModule = module {
