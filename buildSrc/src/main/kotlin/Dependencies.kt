@@ -18,7 +18,7 @@ object Modules {
 
 
 object Versions {
-    val kotlin = "1.3.41"
+    val kotlin = "1.3.50"
     val gradle = "3.5.0"
     val core_ktx = "1.0.2"
     val appcompat = "1.0.2"
@@ -30,8 +30,8 @@ object Versions {
     val androidx_navigation = "2.1.0-rc01"
     val android_material = "1.1.0-alpha09"
     val timberkt = "1.5.1"
-    val retrofit = "2.4.0"
-    val logging_interceptor = "3.10.0"
+    val retrofit = "2.6.1"
+    val logging_interceptor = "4.1.0"
     val retrofit_coroutine_adapter = "0.9.2"
     val coroutines = "1.1.1"
     val truth = "0.42"
