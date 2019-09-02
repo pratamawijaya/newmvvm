@@ -1,12 +1,16 @@
 package newmvvm.feature.newsapi.presentation.list
 
-import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.github.ajalt.timberkt.d
+import com.github.ajalt.timberkt.e
 import kotlinx.coroutines.launch
 import newmvvm.feature.newsapi.domain.model.Article
 import newmvvm.feature.newsapi.domain.usecase.GetNewsListUseCase
 
-class NewsListViewModel(private val useCase: GetNewsListUseCase) : ViewModel() {
+internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseCase) : ViewModel() {
 
     private var _articles = MutableLiveData<List<Article>>()
 
@@ -14,16 +18,20 @@ class NewsListViewModel(private val useCase: GetNewsListUseCase) : ViewModel() {
         get() = _articles
 
     fun topHeadlines() {
-        Log.d("tag", "running topheadlines viewmodel")
+        d { "newslistmodel running topheadlines viewmodel" }
         viewModelScope.launch {
             try {
-                val articles = useCase.getTopNewsByCountry(country = "indo", category = "Technology")
-                Log.d("tag", "size ${articles.value?.size}")
-                articles.value?.map {
-                    Log.d("debug", "data ${it.title}")
+                getNewsListUseCase.getTopNewsByCountry(country = "us", category = "technology").also {
+                    if (it.isNotEmpty()) {
+                        it.map { article ->
+                            d { "article ${article.title}" }
+                        }
+                    } else {
+                        d { "artcile is empty" }
+                    }
                 }
             } catch (ex: Exception) {
-                Log.e("error", "error ${ex.localizedMessage}")
+                e { "error ${ex.localizedMessage}" }
             }
         }
     }

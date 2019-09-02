@@ -11,12 +11,12 @@ class ArticleMapper : BaseMapper<ArticleModel, Article> {
         return Article(
                 source = Source(id = 0, name = ""),
                 url = model.url,
-                author = model.author,
-                content = model.content,
-                description = model.description,
+                author = model.author ?: "",
+                content = model.content ?: "",
+                description = model.description ?: "",
                 publishedAt = Date(),
-                title = model.title,
-                urlToImage = model.urlToImage
+                title = model.title ?: "",
+                urlToImage = model.urlToImage ?: ""
         )
     }
 

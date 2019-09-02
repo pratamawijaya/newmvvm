@@ -2,15 +2,14 @@ package newmvvm.feature.newsapi.di
 
 import newmvvm.feature.newsapi.data.model.mapper.ArticleMapper
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
-import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
 import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
 import newmvvm.feature.newsapi.data.services.NewsApiServices
+import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
 import newmvvm.feature.newsapi.domain.usecase.GetNewsListUseCase
 import newmvvm.feature.newsapi.presentation.list.NewsListViewModel
 import newsapi.common.network.createOkHttpClient
 import newsapi.common.network.createWebService
 import newsapi.feature.newsapilist.BuildConfig
-import okhttp3.Interceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
@@ -36,12 +35,8 @@ val repositoryModule = module {
 }
 
 val networkModule = module {
-    single { createOkHttpClient(createNewsInterceptor(), BuildConfig.DEBUG) }
+    single { createOkHttpClient(NewsApiInterceptor(), BuildConfig.DEBUG) }
     single { createWebService<NewsApiServices>(okHttpClient = get(), url = "https://newsapi.org/v2/") }
-}
-
-fun createNewsInterceptor(): Interceptor? {
-    return NewsApiInterceptor()
 }
 
 val useCaseModule = module {
@@ -49,5 +44,5 @@ val useCaseModule = module {
 }
 
 val viewModelModule = module {
-    viewModel { NewsListViewModel(useCase = get()) }
+    viewModel { NewsListViewModel(getNewsListUseCase = get()) }
 }
