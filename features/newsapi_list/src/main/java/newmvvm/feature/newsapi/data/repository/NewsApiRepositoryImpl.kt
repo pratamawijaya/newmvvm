@@ -14,6 +14,12 @@ internal class NewsApiRepositoryImpl(val newsApi: NewsApiServices,
         return articleMapper.mapToListDomain(articlesModel.articles)
     }
 
+    override fun getData() = liveData {
+        val articlesModel = newsApi.topHeadlines("us", "technology")
+        val articlesDomain = articleMapper.mapToListDomain(articlesModel.articles)
+        emit(articlesDomain)
+    }
+
     override fun everything(query: String, sortBy: String) = liveData<List<Article>> {
 
     }

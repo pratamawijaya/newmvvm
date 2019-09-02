@@ -17,6 +17,14 @@ internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseC
     val articles: LiveData<List<Article>>
         get() = _articles
 
+    fun getData() {
+        viewModelScope.launch {
+            getNewsListUseCase.getSomeData().also {
+                d { "get data value ${it.value?.size}" }
+            }
+        }
+    }
+
     fun topHeadlines() {
         d { "newslistmodel running topheadlines viewmodel" }
         viewModelScope.launch {

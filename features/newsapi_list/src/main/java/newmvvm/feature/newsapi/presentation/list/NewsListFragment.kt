@@ -30,7 +30,8 @@ class NewsListFragment : Fragment() {
 //            it.findNavController().navigate(R.id.action_fragment_news_list_to_newsDetailFragment)
 //        }
 
-        vm.topHeadlines()
+//        vm.topHeadlines()
+        vm.getData()
 
         vm.articles.observe(this, Observer {
             // todo
