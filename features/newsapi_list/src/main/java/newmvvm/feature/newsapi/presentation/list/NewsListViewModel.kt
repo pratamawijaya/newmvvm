@@ -27,7 +27,7 @@ internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseC
                             d { "article ${article.title}" }
                         }
                     } else {
-                        d { "artcile is empty" }
+                        d { "article is empty" }
                     }
                 }
             } catch (ex: Exception) {
@@ -35,5 +35,4 @@ internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseC
             }
         }
     }
-
 }

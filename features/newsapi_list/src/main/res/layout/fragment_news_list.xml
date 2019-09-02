@@ -4,17 +4,8 @@
     android:layout_height="match_parent"
     tools:context="newmvvm.feature.newsapi.presentation.list.NewsListFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="News List" />
-
-    <Button
-        android:id="@+id/btnDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Detail News" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

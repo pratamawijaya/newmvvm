@@ -39,6 +39,9 @@ object Versions {
     val gradle_version_plugin = "0.23.0"
     val viewmodel_ktx = "2.2.0-alpha01"
     val livedata = "2.2.0-alpha01"
+    val epoxy = "3.7.0"
+    val sdpssp = "1.0.6"
+    val butterknife_plugin = "10.1.0"
 }
 
 object Deps {
@@ -46,6 +49,7 @@ object Deps {
     val tools_kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val tools_gradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val tools_gradle_lib_version = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradle_version_plugin}"
+    val tools_butterknife_plugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterknife_plugin}"
 
     val lib_coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     val lib_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
@@ -76,6 +80,12 @@ object Deps {
     val lib_retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     val lib_okhttp_interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logging_interceptor}"
     val lib_retrofit_coroutine_adapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit_coroutine_adapter}"
+
+    val lib_epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
+    val lib_processor_epoxy = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
+
+    val lib_ssp = "com.intuit.ssp:ssp-android:${Versions.sdpssp}"
+    val lib_sdp = "com.intuit.sdp:sdp-android:${Versions.sdpssp}"
 
     val lib_test_google_truth = "com.google.truth:truth:${Versions.truth}"
     val lib_test_koin = "org.koin:koin-test:${Versions.koin}"
