@@ -42,6 +42,7 @@ object Versions {
     val epoxy = "3.7.0"
     val sdpssp = "1.0.6"
     val butterknife_plugin = "10.1.0"
+    val room = "2.2.0-beta01"
 }
 
 object Deps {
@@ -83,6 +84,11 @@ object Deps {
 
     val lib_epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
     val lib_processor_epoxy = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
+
+    val lib_room = "androidx.room:room-runtime:${Versions.room}"
+    val lib_processor_room = "androidx.room:room-compiler:${Versions.room}"
+    val lib_room_coroutines = "androidx.room:room-ktx:${Versions.room}"
+    val lib_test_room = "androidx.room:room-testing:${Versions.room}"
 
     val lib_ssp = "com.intuit.ssp:ssp-android:${Versions.sdpssp}"
     val lib_sdp = "com.intuit.sdp:sdp-android:${Versions.sdpssp}"

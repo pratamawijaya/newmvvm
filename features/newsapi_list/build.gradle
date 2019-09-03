@@ -31,8 +31,11 @@ dependencies {
     implementation Deps.lib_epoxy
     implementation Deps.lib_ssp
     implementation Deps.lib_sdp
+    implementation Deps.lib_room
+    implementation Deps.lib_room_coroutines
 
     kapt Deps.lib_processor_epoxy
+    kapt Deps.lib_processor_room
 
     implementation Deps.lib_koin_core
     implementation Deps.lib_koin_scope

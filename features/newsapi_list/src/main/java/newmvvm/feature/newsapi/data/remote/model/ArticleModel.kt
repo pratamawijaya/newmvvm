@@ -1,4 +1,4 @@
-package newmvvm.feature.newsapi.data.model
+package newmvvm.feature.newsapi.data.remote.model
 
 import java.util.*
 

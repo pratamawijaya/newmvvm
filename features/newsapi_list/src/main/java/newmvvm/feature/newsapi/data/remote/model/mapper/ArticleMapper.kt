@@ -1,7 +1,7 @@
-package newmvvm.feature.newsapi.data.model.mapper
+package newmvvm.feature.newsapi.data.remote.model.mapper
 
 import newmvvm.common.core.BaseMapper
-import newmvvm.feature.newsapi.data.model.ArticleModel
+import newmvvm.feature.newsapi.data.remote.model.ArticleModel
 import newmvvm.feature.newsapi.domain.model.Article
 import newmvvm.feature.newsapi.domain.model.Source
 import java.util.*

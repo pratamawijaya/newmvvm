@@ -1,6 +1,8 @@
 package newmvvm.feature.newsapi.di
 
-import newmvvm.feature.newsapi.data.model.mapper.ArticleMapper
+import androidx.room.Room
+import newmvvm.feature.newsapi.data.local.ArticleDatabase
+import newmvvm.feature.newsapi.data.remote.model.mapper.ArticleMapper
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
 import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
 import newmvvm.feature.newsapi.data.services.NewsApiServices
@@ -10,6 +12,7 @@ import newmvvm.feature.newsapi.presentation.list.NewsListViewModel
 import newsapi.common.network.createOkHttpClient
 import newsapi.common.network.createWebService
 import newsapi.feature.newsapilist.BuildConfig
+import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
@@ -18,12 +21,21 @@ fun injectFeature() = loadFeature
 
 private val loadFeature by lazy {
     loadKoinModules(
-            listOf(networkModule,
+            listOf(
+                    featureModule,
+                    networkModule,
                     repositoryModule,
                     useCaseModule,
                     mapperModule,
                     viewModelModule)
     )
+}
+
+val featureModule = module {
+    single {
+        Room.databaseBuilder(androidApplication(), ArticleDatabase::class.java, "newmvvm-articlesdb").build()
+    }
+    single { get<ArticleDatabase>().articleDao() }
 }
 
 val mapperModule = module {
