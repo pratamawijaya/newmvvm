@@ -1,6 +1,5 @@
 package newmvvm.feature.newsapi.presentation.list
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,12 +9,14 @@ import kotlinx.coroutines.launch
 import newmvvm.feature.newsapi.domain.model.Article
 import newmvvm.feature.newsapi.domain.usecase.GetNewsListUseCase
 
+sealed class NewsListState
+data class ArticlesLoaded(val list: List<Article>) : NewsListState()
+object LoadingState : NewsListState()
+data class ErrorState(val msg: String) : NewsListState()
+
 internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseCase) : ViewModel() {
 
-    private var _articles = MutableLiveData<List<Article>>()
-
-    val articles: LiveData<List<Article>>
-        get() = _articles
+    var newsListState = MutableLiveData<NewsListState>()
 
     fun getData() {
         viewModelScope.launch {
@@ -27,19 +28,22 @@ internal class NewsListViewModel(private val getNewsListUseCase: GetNewsListUseC
 
     fun topHeadlines() {
         d { "newslistmodel running topheadlines viewmodel" }
+
+        newsListState.postValue(LoadingState)
+
         viewModelScope.launch {
             try {
                 getNewsListUseCase.getTopNewsByCountry(country = "us", category = "technology").also {
                     if (it.isNotEmpty()) {
-                        it.map { article ->
-                            d { "article ${article.title}" }
-                        }
+                        newsListState.postValue(ArticlesLoaded(it))
                     } else {
                         d { "article is empty" }
+                        newsListState.postValue(ErrorState("Article Empty"))
                     }
                 }
             } catch (ex: Exception) {
                 e { "error ${ex.localizedMessage}" }
+                newsListState.postValue(ErrorState("Error"))
             }
         }
     }

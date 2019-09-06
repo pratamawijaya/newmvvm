@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.github.ajalt.timberkt.d
+import com.github.ajalt.timberkt.e
 import newsapi.feature.newsapilist.R
 import org.koin.android.ext.android.inject
 
@@ -26,16 +28,25 @@ class NewsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        btnDetail.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_fragment_news_list_to_newsDetailFragment)
-//        }
+        vm.topHeadlines()
+        vm.newsListState.observe(this, stateObserver)
+    }
 
-//        vm.topHeadlines()
-        vm.getData()
+    private val stateObserver = Observer<NewsListState> { state ->
+        when (state) {
+            is LoadingState -> {
+                d { "loading state" }
+            }
 
-        vm.articles.observe(this, Observer {
-            // todo
-        })
+            is ErrorState -> {
+                e { "error state ${state.msg}" }
+            }
+            is ArticlesLoaded -> {
+                state.list.map {
+                    d { "Article ${it.title}" }
+                }
+            }
+        }
     }
 
 }
