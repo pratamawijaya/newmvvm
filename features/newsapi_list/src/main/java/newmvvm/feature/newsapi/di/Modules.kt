@@ -2,7 +2,8 @@ package newmvvm.feature.newsapi.di
 
 import androidx.room.Room
 import newmvvm.feature.newsapi.data.local.ArticleDatabase
-import newmvvm.feature.newsapi.data.remote.model.mapper.ArticleMapper
+import newmvvm.feature.newsapi.data.local.mapper.ArticleRoomModelMapper
+import newmvvm.feature.newsapi.data.remote.mapper.ArticleNetworkModelMapper
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
 import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
 import newmvvm.feature.newsapi.data.services.NewsApiServices
@@ -39,7 +40,8 @@ val featureModule = module {
 }
 
 val mapperModule = module {
-    single { ArticleMapper() }
+    single { ArticleNetworkModelMapper() }
+    single { ArticleRoomModelMapper() }
 }
 
 val repositoryModule = module {
