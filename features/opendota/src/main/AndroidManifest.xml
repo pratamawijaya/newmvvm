@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="newmvvm.feature.opendota">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".OpenDotaActivity">
+            <intent-filter>
+                <action android:name="navigations.opendota.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -28,6 +28,7 @@ dependencies {
     implementation project(Modules.features_onboarding)
     implementation project(Modules.features_homepage)
     implementation project(Modules.features_newsapi_list)
+    implementation project(Modules.features_open_dota)
 
     implementation project(Modules.common_android_navigation)
     implementation project(Modules.common_android_uicomponents)

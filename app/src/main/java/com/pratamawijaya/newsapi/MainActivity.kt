@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         d { "main activity" }
 
-        startActivity(Navigations.openNewsApiList(this))
+        startActivity(Navigations.openHomepage(this))
     }
 }

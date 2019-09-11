@@ -19,5 +19,9 @@ class HomepageActivity : AppCompatActivity() {
             d { "open news api clicked" }
             startActivity(Navigations.openNewsApiList(this))
         }
+
+        btnOpenDota.setOnClickListener {
+            startActivity(Navigations.openOpenDotaApi(this))
+        }
     }
 }
