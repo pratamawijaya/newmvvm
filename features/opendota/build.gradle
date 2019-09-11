@@ -35,6 +35,7 @@ dependencies {
     implementation Deps.lib_room
     implementation Deps.lib_room_coroutines
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt Deps.lib_processor_epoxy
     kapt Deps.lib_processor_room
 

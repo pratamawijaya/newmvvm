@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/opendota_graph"
+    app:startDestination="@id/heroesListFragment">
+
+    <fragment
+        android:id="@+id/heroesListFragment"
+        android:name="newmvvm.feature.opendota.presentation.list.HeroesListFragment"
+        android:label="HeroesListFragment"
+        tools:layout="@layout/fragment_heroes_list" />
+</navigation>
