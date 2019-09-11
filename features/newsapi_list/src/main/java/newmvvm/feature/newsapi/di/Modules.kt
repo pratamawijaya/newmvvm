@@ -4,9 +4,9 @@ import androidx.room.Room
 import newmvvm.feature.newsapi.data.local.ArticleDatabase
 import newmvvm.feature.newsapi.data.local.mapper.ArticleRoomModelMapper
 import newmvvm.feature.newsapi.data.remote.mapper.ArticleNetworkModelMapper
+import newmvvm.feature.newsapi.data.remote.services.NewsApiInterceptor
+import newmvvm.feature.newsapi.data.remote.services.NewsApiServices
 import newmvvm.feature.newsapi.data.repository.NewsApiRepositoryImpl
-import newmvvm.feature.newsapi.data.services.NewsApiInterceptor
-import newmvvm.feature.newsapi.data.services.NewsApiServices
 import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
 import newmvvm.feature.newsapi.domain.usecase.GetNewsListUseCase
 import newmvvm.feature.newsapi.presentation.list.NewsListViewModel

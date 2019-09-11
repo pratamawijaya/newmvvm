@@ -1,4 +1,4 @@
-package newmvvm.feature.newsapi.data.services
+package newmvvm.feature.newsapi.data.remote.services
 
 import newmvvm.feature.newsapi.data.remote.model.response.TopHeadlinesResponse
 import retrofit2.http.GET
