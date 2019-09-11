@@ -9,9 +9,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+const val TIMEOUT: Long = 60
 
 fun createOkHttpClient(interceptor: Interceptor?, debug: Boolean = false): OkHttpClient {
-    val timeout = 60L
     val httpLoggingInterceptor = HttpLoggingInterceptor()
     val clientBuilder = OkHttpClient.Builder()
 
@@ -25,8 +25,8 @@ fun createOkHttpClient(interceptor: Interceptor?, debug: Boolean = false): OkHtt
     }
 
     return clientBuilder
-            .connectTimeout(timeout, TimeUnit.SECONDS)
-            .readTimeout(timeout, TimeUnit.SECONDS)
+            .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
+            .readTimeout(TIMEOUT, TimeUnit.SECONDS)
             .build()
 }
 
