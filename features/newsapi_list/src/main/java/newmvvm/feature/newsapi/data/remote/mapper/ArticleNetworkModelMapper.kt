@@ -20,5 +20,4 @@ class ArticleNetworkModelMapper : Mapper<ArticleNetworkModel, Article> {
                 urlToImage = from.urlToImage ?: ""
         )
     }
-
 }

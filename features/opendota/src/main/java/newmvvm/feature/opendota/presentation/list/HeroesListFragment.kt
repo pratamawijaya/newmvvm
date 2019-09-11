@@ -1,6 +1,5 @@
 package newmvvm.feature.opendota.presentation.list
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,8 +22,11 @@ class HeroesListFragment : Fragment() {
     private val heroesVm: HeroesListViewModel by inject()
     private val heroesAdapter = GroupAdapter<ViewHolder>()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_heroes_list, container, false)
     }
@@ -34,7 +36,6 @@ class HeroesListFragment : Fragment() {
 
         heroesVm.heroesListState.observe(this, stateObserver)
         heroesVm.getHeroes()
-
 
         rvListHeroes.apply {
             layoutManager = LinearLayoutManager(requireActivity())

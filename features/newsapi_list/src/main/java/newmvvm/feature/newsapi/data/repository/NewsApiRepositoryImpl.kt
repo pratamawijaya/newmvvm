@@ -6,8 +6,10 @@ import newmvvm.feature.newsapi.data.remote.services.NewsApiServices
 import newmvvm.feature.newsapi.domain.model.Article
 import newmvvm.feature.newsapi.domain.repository.NewsApiRepository
 
-internal class NewsApiRepositoryImpl(val newsApi: NewsApiServices,
-                                     val articleMapper: ArticleNetworkModelMapper) : NewsApiRepository {
+internal class NewsApiRepositoryImpl(
+    val newsApi: NewsApiServices,
+    val articleMapper: ArticleNetworkModelMapper
+) : NewsApiRepository {
 
     override suspend fun topHeadlines(country: String, category: String, pageSize: Int, page: Int): List<Article> {
         val articlesModel = newsApi.topHeadlines(country, category)
@@ -21,6 +23,5 @@ internal class NewsApiRepositoryImpl(val newsApi: NewsApiServices,
     }
 
     override fun everything(query: String, sortBy: String) = liveData<List<Article>> {
-
     }
 }

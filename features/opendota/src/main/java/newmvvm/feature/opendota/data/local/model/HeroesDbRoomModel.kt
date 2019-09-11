@@ -1,4 +1,6 @@
 package newmvvm.feature.opendota.data.local.model
 
-data class HeroesDbRoomModel(val id:Int,
-                             val name:String)
+data class HeroesDbRoomModel(
+    val id: Int,
+    val name: String
+)

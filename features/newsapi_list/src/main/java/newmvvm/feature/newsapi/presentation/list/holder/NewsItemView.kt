@@ -11,8 +11,10 @@ interface NewsItemListener {
     fun onNewsClick(article: Article)
 }
 
-class NewsItemView(val article: Article,
-                   private val listener: NewsItemListener) : Item() {
+class NewsItemView(
+    val article: Article,
+    private val listener: NewsItemListener
+) : Item() {
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
         val tvTitle = viewHolder.itemView.tvNewsTitle
@@ -27,5 +29,4 @@ class NewsItemView(val article: Article,
     }
 
     override fun getLayout(): Int = R.layout.item_news
-
 }

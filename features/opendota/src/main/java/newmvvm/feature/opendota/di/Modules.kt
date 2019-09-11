@@ -32,7 +32,6 @@ val viewModelModule = module {
 }
 
 val featureModule = module {
-
 }
 
 val mapperModule = module {

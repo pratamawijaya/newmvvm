@@ -19,5 +19,4 @@ class HeroesItem(private val hero: Heroes) : Item() {
     }
 
     override fun getLayout(): Int = R.layout.item_heroes
-
 }
