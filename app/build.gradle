@@ -27,7 +27,6 @@ android {
 dependencies {
     implementation project(Modules.features_onboarding)
     implementation project(Modules.features_homepage)
-    implementation project(Modules.features_hackernews_list)
     implementation project(Modules.features_newsapi_list)
 
     implementation project(Modules.common_android_navigation)

@@ -23,14 +23,21 @@ dependencies {
     implementation Deps.lib_viewmodel_ktx
     implementation Deps.lib_viewmodel_lifecycleruntime
     implementation Deps.lib_viewmodel_livedata
+
     implementation Deps.lib_livedata
     implementation Deps.lib_livedata_extension
     implementation Deps.lib_coroutines_core
     implementation Deps.lib_coroutines_android
+
     implementation Deps.lib_timberkt
+
     implementation Deps.lib_epoxy
+    implementation Deps.lib_groupie
+    implementation Deps.lib_groupie_extension
+
     implementation Deps.lib_ssp
     implementation Deps.lib_sdp
+
     implementation Deps.lib_room
     implementation Deps.lib_room_coroutines
 

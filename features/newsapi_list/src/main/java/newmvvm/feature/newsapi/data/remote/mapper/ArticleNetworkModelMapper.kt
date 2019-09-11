@@ -8,16 +8,16 @@ import java.util.*
 
 class ArticleNetworkModelMapper : Mapper<ArticleNetworkModel, Article> {
 
-    override fun map(model: ArticleNetworkModel): Article {
+    override fun map(from: ArticleNetworkModel): Article {
         return Article(
                 source = Source(id = 0, name = ""),
-                url = model.url,
-                author = model.author ?: "",
-                content = model.content ?: "",
-                description = model.description ?: "",
+                url = from.url,
+                author = from.author ?: "",
+                content = from.content ?: "",
+                description = from.description ?: "",
                 publishedAt = Date(),
-                title = model.title ?: "",
-                urlToImage = model.urlToImage ?: ""
+                title = from.title ?: "",
+                urlToImage = from.urlToImage ?: ""
         )
     }
 

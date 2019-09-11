@@ -16,10 +16,6 @@ object Navigations {
         return internalIntent(context, "navigations.homepage.open")
     }
 
-    fun openHackerNewsList(context: Context): Intent {
-        return internalIntent(context, "navigations.hackernewslist.open")
-    }
-
     fun openNewsApiList(context: Context): Intent {
         return internalIntent(context, "navigations.newsapi.open")
     }

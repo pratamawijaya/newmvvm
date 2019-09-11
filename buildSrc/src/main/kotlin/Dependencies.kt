@@ -13,7 +13,6 @@ object Modules {
 
     val features_onboarding = ":features:onboarding"
     val features_homepage = ":features:homepage"
-    val features_hackernews_list = ":features:hackernews_list"
     val features_newsapi_list = ":features:newsapi_list"
 }
 
@@ -43,6 +42,8 @@ object Versions {
     val sdpssp = "1.0.6"
     val butterknife_plugin = "10.1.0"
     val room = "2.2.0-beta01"
+    val groupie = "2.5.1"
+    val picasso = "2.71828"
 }
 
 object Deps {
@@ -82,6 +83,8 @@ object Deps {
     val lib_okhttp_interceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logging_interceptor}"
     val lib_retrofit_coroutine_adapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit_coroutine_adapter}"
 
+    val lib_groupie = "com.xwray:groupie:${Versions.groupie}"
+    val lib_groupie_extension = "com.xwray:groupie-kotlin-android-extensions:${Versions.groupie}"
     val lib_epoxy = "com.airbnb.android:epoxy:${Versions.epoxy}"
     val lib_processor_epoxy = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
 
@@ -92,6 +95,8 @@ object Deps {
 
     val lib_ssp = "com.intuit.ssp:ssp-android:${Versions.sdpssp}"
     val lib_sdp = "com.intuit.sdp:sdp-android:${Versions.sdpssp}"
+
+    val lib_picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
 
     val lib_test_google_truth = "com.google.truth:truth:${Versions.truth}"
     val lib_test_koin = "org.koin:koin-test:${Versions.koin}"

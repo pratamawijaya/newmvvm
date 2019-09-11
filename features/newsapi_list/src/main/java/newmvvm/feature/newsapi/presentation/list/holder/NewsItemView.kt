@@ -1,29 +1,31 @@
 package newmvvm.feature.newsapi.presentation.list.holder
 
-import android.widget.ImageView
-import android.widget.TextView
-import com.airbnb.epoxy.EpoxyAttribute
-import com.airbnb.epoxy.EpoxyModelClass
-import com.airbnb.epoxy.EpoxyModelWithHolder
+import com.xwray.groupie.kotlinandroidextensions.Item
+import com.xwray.groupie.kotlinandroidextensions.ViewHolder
+import kotlinx.android.synthetic.main.item_news.view.*
+import newmvvm.common.extensions.loadFromUrl
 import newmvvm.feature.newsapi.domain.model.Article
-import newmvvm.feature.newsapi.utils.KotlinEpoxyHolder
 import newsapi.feature.newsapilist.R
-import newsapi.feature.newsapilist.R2
 
-@EpoxyModelClass(layout = R2.layout.item_news)
-abstract class NewsItemView : EpoxyModelWithHolder<NewsItemView.Holder>() {
+interface NewsItemListener {
+    fun onNewsClick(article: Article)
+}
 
-    @EpoxyAttribute
-    lateinit var model: Article
+class NewsItemView(val article: Article,
+                   private val listener: NewsItemListener) : Item() {
 
-    override fun bind(holder: Holder) {
-        super.bind(holder)
-        holder.newsTitleTv.text = model.title
+    override fun bind(viewHolder: ViewHolder, position: Int) {
+        val tvTitle = viewHolder.itemView.tvNewsTitle
+        val imgNews = viewHolder.itemView.imgNews
+
+        tvTitle.text = article.title
+        imgNews.loadFromUrl(article.urlToImage)
+
+        viewHolder.itemView.setOnClickListener {
+            listener.onNewsClick(article)
+        }
     }
 
+    override fun getLayout(): Int = R.layout.item_news
 
-    inner class Holder : KotlinEpoxyHolder() {
-        val newsImg by bind<ImageView>(R.id.imgNews)
-        val newsTitleTv by bind<TextView>(R.id.tvNewsTitle)
-    }
 }

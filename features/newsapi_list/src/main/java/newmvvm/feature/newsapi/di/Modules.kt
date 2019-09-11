@@ -34,7 +34,10 @@ private val loadFeature by lazy {
 
 val featureModule = module {
     single {
-        Room.databaseBuilder(androidApplication(), ArticleDatabase::class.java, "newmvvm-articlesdb").build()
+        Room.databaseBuilder(
+                androidApplication(),
+                ArticleDatabase::class.java,
+                "newmvvm-articlesdb").build()
     }
     single { get<ArticleDatabase>().articleDao() }
 }

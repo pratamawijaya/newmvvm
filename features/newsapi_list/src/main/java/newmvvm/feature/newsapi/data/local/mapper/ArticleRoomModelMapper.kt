@@ -7,16 +7,16 @@ import newmvvm.feature.newsapi.domain.model.Source
 import java.util.*
 
 class ArticleRoomModelMapper : Mapper<ArticleRoomModel, Article> {
-    override fun map(model: ArticleRoomModel): Article {
+    override fun map(from: ArticleRoomModel): Article {
         return Article(
                 source = Source(id = 0, name = ""),
-                url = model.url,
-                author = model.author,
-                content = model.content,
-                description = model.description,
+                url = from.url,
+                author = from.author,
+                content = from.content,
+                description = from.description,
                 publishedAt = Date(),
-                title = model.title,
-                urlToImage = model.urlToImage
+                title = from.title,
+                urlToImage = from.urlToImage
         )
     }
 }

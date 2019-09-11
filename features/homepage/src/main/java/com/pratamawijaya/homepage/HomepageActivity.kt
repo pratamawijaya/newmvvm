@@ -15,7 +15,7 @@ class HomepageActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Dashboard"
 
-        btnOpenHackerNews.setOnClickListener {
+        btnOpenNews.setOnClickListener {
             d { "open news api clicked" }
             startActivity(Navigations.openNewsApiList(this))
         }

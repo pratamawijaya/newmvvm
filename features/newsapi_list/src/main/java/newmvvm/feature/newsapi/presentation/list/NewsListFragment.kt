@@ -7,17 +7,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.ajalt.timberkt.d
 import com.github.ajalt.timberkt.e
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.fragment_news_list.*
+import newmvvm.feature.newsapi.domain.model.Article
+import newmvvm.feature.newsapi.presentation.list.holder.NewsItemListener
+import newmvvm.feature.newsapi.presentation.list.holder.NewsItemView
 import newsapi.feature.newsapilist.R
 import org.koin.android.ext.android.inject
 
 /**
  * A simple [Fragment] subclass.
  */
-class NewsListFragment : Fragment() {
+class NewsListFragment : Fragment(), NewsItemListener {
 
     private val vm: NewsListViewModel by inject()
+    private val newsListAdapter = GroupAdapter<ViewHolder>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -30,6 +38,16 @@ class NewsListFragment : Fragment() {
 
         vm.topHeadlines()
         vm.newsListState.observe(this, stateObserver)
+
+        rvListNews.apply {
+            layoutManager = LinearLayoutManager(requireActivity())
+            adapter = newsListAdapter
+        }
+
+    }
+
+    override fun onNewsClick(article: Article) {
+        // todo: implement change screens to detail article
     }
 
     private val stateObserver = Observer<NewsListState> { state ->
@@ -44,6 +62,7 @@ class NewsListFragment : Fragment() {
             is ArticlesLoaded -> {
                 state.list.map {
                     d { "Article ${it.title}" }
+                    newsListAdapter.add(NewsItemView(it, this))
                 }
             }
         }

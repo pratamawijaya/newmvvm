@@ -5,7 +5,6 @@ include Modules.common_android_uicomponents
 include Modules.common_android_network
 include Modules.features_homepage
 include Modules.features_onboarding
-include Modules.features_hackernews_list
 include Modules.features_newsapi_list
 
 rootProject.name = 'android-news-mvvm'
