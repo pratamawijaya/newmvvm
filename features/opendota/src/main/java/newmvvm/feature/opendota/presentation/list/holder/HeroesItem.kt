@@ -15,6 +15,7 @@ class HeroesItem(private val hero: Heroes) : Item() {
 
         d { "heroes ${hero.name} ${hero.img}" }
         imgHeroes.loadFromUrl(hero.img)
+
         tvTitleHeroes.text = hero.name
     }
 
