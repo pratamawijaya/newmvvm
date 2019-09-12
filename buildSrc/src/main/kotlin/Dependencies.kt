@@ -15,6 +15,7 @@ object Modules {
     val features_homepage = ":features:homepage"
     val features_newsapi_list = ":features:newsapi_list"
     val features_open_dota = ":features:opendota"
+    val features_marvel_heroes = ":features:marvelheroes"
 }
 
 

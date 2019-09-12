@@ -41,9 +41,9 @@ subprojects {
                 }
             }
 
-            androidExtensions {
-                experimental = true
-            }
+//            androidExtensions {
+//                experimental = true
+//            }
         }
     }
 }

@@ -7,5 +7,6 @@ include Modules.features_homepage
 include Modules.features_onboarding
 include Modules.features_newsapi_list
 include Modules.features_open_dota
+include Modules.features_marvel_heroes
 
 rootProject.name = 'android-news-mvvm'
