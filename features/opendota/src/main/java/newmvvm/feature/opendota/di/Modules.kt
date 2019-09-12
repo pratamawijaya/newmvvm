@@ -10,6 +10,7 @@ import newmvvm.feature.opendota.domain.usecase.GetHeroesListCase
 import newmvvm.feature.opendota.presentation.list.HeroesListViewModel
 import newsapi.common.network.createOkHttpClient
 import newsapi.common.network.createWebService
+import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
@@ -47,6 +48,8 @@ val repositoryModule = module {
 }
 
 val networkModule = module {
-    single { createOkHttpClient(OpenDotaInterceptor(), BuildConfig.DEBUG) }
-    single { createWebService<OpenDotaServices>(okHttpClient = get(), url = "https://api.opendota.com/api/") }
+    single { openDotaApi }
 }
+
+private val okHttpClient : OkHttpClient = createOkHttpClient(OpenDotaInterceptor(),BuildConfig.DEBUG)
+private val openDotaApi: OpenDotaServices = createWebService(okHttpClient = okHttpClient, url = "https://api.opendota.com/api/")

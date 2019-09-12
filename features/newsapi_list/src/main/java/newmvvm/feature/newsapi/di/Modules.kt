@@ -13,6 +13,7 @@ import newmvvm.feature.newsapi.presentation.list.NewsListViewModel
 import newsapi.common.network.createOkHttpClient
 import newsapi.common.network.createWebService
 import newsapi.feature.newsapilist.BuildConfig
+import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -52,8 +53,7 @@ val repositoryModule = module {
 }
 
 val networkModule = module {
-    single { createOkHttpClient(NewsApiInterceptor(), BuildConfig.DEBUG) }
-    single { createWebService<NewsApiServices>(okHttpClient = get(), url = "https://newsapi.org/v2/") }
+    single { newsApiServices }
 }
 
 val useCaseModule = module {
@@ -63,3 +63,6 @@ val useCaseModule = module {
 val viewModelModule = module {
     viewModel { NewsListViewModel(getNewsListUseCase = get()) }
 }
+
+private val okHttpClient : OkHttpClient = createOkHttpClient(NewsApiInterceptor(),BuildConfig.DEBUG)
+private val newsApiServices: NewsApiServices = createWebService(okHttpClient = okHttpClient, url = "https://newsapi.org/v2/")

@@ -23,5 +23,9 @@ class HomepageActivity : AppCompatActivity() {
         btnOpenDota.setOnClickListener {
             startActivity(Navigations.openOpenDotaApi(this))
         }
+
+        btnMarvelHeroes.setOnClickListener {
+            startActivity(Navigations.openMarvelHeroes(this))
+        }
     }
 }

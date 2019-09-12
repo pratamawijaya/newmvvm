@@ -26,6 +26,9 @@ android {
 }
 
 dependencies {
+    api Deps.lib_appcompat
+    api Deps.lib_constraint_layout
+
     implementation project(Modules.features_onboarding)
     implementation project(Modules.features_homepage)
     implementation project(Modules.features_newsapi_list)
@@ -34,7 +37,7 @@ dependencies {
     implementation project(Modules.common_android_navigation)
     implementation project(Modules.common_android_uicomponents)
 
-    implementation Deps.tools_kotlin_stdlib
+    api Deps.tools_kotlin_stdlib
     implementation Deps.lib_appcompat
     implementation Deps.lib_core_ktx
     implementation Deps.lib_constraint_layout

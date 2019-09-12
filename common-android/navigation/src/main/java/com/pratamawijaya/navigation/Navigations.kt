@@ -24,5 +24,10 @@ object Navigations {
         return internalIntent(context, "navigations.opendota.open")
     }
 
-    private fun internalIntent(context: Context, action: String) = Intent(action).setPackage(context.packageName)
+    fun openMarvelHeroes(context: Context): Intent {
+        return internalIntent(context, "navigations.marvelheroes.open")
+    }
+
+    private fun internalIntent(context: Context, action: String) =
+        Intent(action).setPackage(context.packageName)
 }
