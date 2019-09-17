@@ -4,5 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 dependencies {
     implementation Deps.lib_picasso
+    implementation Deps.lib_coil
     implementation Deps.lib_timberkt
 }

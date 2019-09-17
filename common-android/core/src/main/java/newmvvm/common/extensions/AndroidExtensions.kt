@@ -1,9 +1,10 @@
 package newmvvm.common.extensions
 
 import android.widget.ImageView
-import com.squareup.picasso.Picasso
+import coil.api.load
 
 fun ImageView.loadFromUrl(url: String) {
     if (url.isEmpty()) return
-    Picasso.get().load(url).into(this)
+    // load image from url with coil
+    this.load(url)
 }

@@ -46,6 +46,7 @@ object Versions {
     val room = "2.2.0-beta01"
     val groupie = "2.5.1"
     val picasso = "2.71828"
+    val coil = "0.7.0"
 }
 
 object Deps {
@@ -99,6 +100,7 @@ object Deps {
     val lib_sdp = "com.intuit.sdp:sdp-android:${Versions.sdpssp}"
 
     val lib_picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+    val lib_coil  = "io.coil-kt:coil:${Versions.coil}"
 
     val lib_test_google_truth = "com.google.truth:truth:${Versions.truth}"
     val lib_test_koin = "org.koin:koin-test:${Versions.koin}"
