@@ -38,8 +38,15 @@ class NewsListFragment : Fragment(), NewsItemListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        vm.topHeadlines()
-        vm.newsListState.observe(this, stateObserver)
+        // vm.topHeadlines()
+        // vm.newsListState.observe(this, stateObserver)
+
+        vm.currentHeadlines.observe(this, Observer { articles ->
+            articles.map {
+                d { "article -> ${it.title}" }
+            }
+        })
+
 
         rvListNews.apply {
             layoutManager = LinearLayoutManager(requireActivity())

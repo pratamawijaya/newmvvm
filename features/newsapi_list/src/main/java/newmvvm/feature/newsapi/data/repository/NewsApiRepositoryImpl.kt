@@ -11,9 +11,14 @@ internal class NewsApiRepositoryImpl(
     val articleMapper: ArticleNetworkModelMapper
 ) : NewsApiRepository {
 
-    override suspend fun topHeadlines(country: String, category: String, pageSize: Int, page: Int): List<Article> {
+    override fun topHeadlines(
+        country: String,
+        category: String,
+        pageSize: Int,
+        page: Int
+    ) = liveData {
         val articlesModel = newsApi.topHeadlines(country, category)
-        return articleMapper.mapToList(articlesModel.articles)
+        emit(articleMapper.mapToList(articlesModel.articles))
     }
 
     override fun getData() = liveData {
