@@ -1,5 +1,8 @@
 package newsapi.common.network
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.Interceptor
@@ -28,6 +31,15 @@ fun createOkHttpClient(interceptor: Interceptor?, debug: Boolean = false): OkHtt
             .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(TIMEOUT, TimeUnit.SECONDS)
             .build()
+}
+
+fun hasNetwork(ctx:Context): Boolean {
+    var isConnected: Boolean? = false // Initial Value
+    val cm = ctx.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+    if (activeNetwork != null && activeNetwork.isConnected)
+        isConnected = true
+    return isConnected?:false
 }
 
 inline fun <reified T> createWebService(okHttpClient: OkHttpClient, url: String): T {
