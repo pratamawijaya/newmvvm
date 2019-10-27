@@ -31,7 +31,6 @@
 ## Usage
 
 - Clone or download this repo first
-- After that, run backend first
 - Connect your phone to the pc or laptop and make sure your phone is connected with debugging mode
 - Open folder with Android Studio
 - Finally click button RUN wait for the process to complete
